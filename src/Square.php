@@ -11,31 +11,45 @@ class Square implements ShapeInterface {
 	/**
 	 * Square constructor.
 	 *
-	 * @param int $side
+	 * @param float $side
 	 */
 	public function __construct($side)
 	{
-		$this->side = $side;
+		$this->side = floatval($side);
 	}
 
 	/**
 	 * Get the area
 	 *
-	 * @return int
+	 * @return float
 	 */
 	public function area()
 	{
-		return sqrt($this->side);
+		$length = $this->side;
+
+		return $length * $length;
 	}
 
 	/**
 	 * Get the perimeter
 	 *
-	 * @return int
+	 * @return float
 	 */
 	public function perimeter()
 	{
 		return 4 * $this->side;
+	}
+
+	/**
+	 * Calculate the volume.
+	 *
+	 * @return float
+	 */
+	public function volume()
+	{
+		$length = $this->side;
+
+		return $length * $length * $length;
 	}
 
 }
