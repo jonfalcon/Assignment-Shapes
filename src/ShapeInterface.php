@@ -19,4 +19,11 @@ interface ShapeInterface {
 	 */
 	public function perimeter();
 
+	/**
+	 * Calculate the volume.
+	 *
+	 * @return float
+	 */
+	public function volume();
+
 }

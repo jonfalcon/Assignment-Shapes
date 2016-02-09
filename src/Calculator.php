@@ -8,22 +8,45 @@ class Calculator {
 	 * Get the total surface area of all shapes
 	 *
 	 * @param array $shape
-	 * @return int
+	 * @return float
 	 */
 	public function surfaceArea(array $shapes)
 	{
-		return "undefined";
+		if(count($shapes))
+		{
+			$sum = 0;
+			foreach($shapes as $shape)
+			{
+				$sum += $shape->area();
+			}
+
+			return $sum;
+		}
+
+		return 0;
 	}
 
 	/**
 	 * Get the total volume of all shapes
 	 * NOTE: Ignore any 2 dimensional shapes because 2D shapes don't have volume.
 	 *
-	 * @param array $shapes
+	 * @param   array $shapes
+	 * @return  float
 	 */
 	public function totalVolume(array $shapes)
 	{
-		return "undefined";
+		if(count($shapes))
+		{
+			$sum = 0;
+			foreach($shapes as $shape)
+			{
+				$sum += $shape->volume();
+			}
+
+			return $sum;
+		}
+
+		return 0;
 	}
 
 }

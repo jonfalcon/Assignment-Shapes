@@ -7,7 +7,7 @@ use Shapes\Square;
 class SquareTest extends \PHPUnit_Framework_TestCase
 {
 
-	public function testCanCalculateArea()
+	public function testItCanCalculateArea()
 	{
 		$square = new Square(0);
 		$this->assertEquals(0, $square->area());
@@ -19,7 +19,7 @@ class SquareTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals(9.8596, $square->area());
 	}
 
-	public function testCanCalculatePerimeter()
+	public function testItCanCalculatePerimeter()
 	{
 		$square = new Square(0);
 		$this->assertEquals(0, $square->perimeter());
@@ -31,16 +31,16 @@ class SquareTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals(12.56, $square->perimeter());
 	}
 
-	public function testCanCalculateVolume()
+	public function testVolumeAlwaysReturnZero()
 	{
 		$square = new Square(0);
 		$this->assertEquals(0, $square->volume());
 
 		$square = new Square(2);
-		$this->assertEquals(8, $square->volume());
+		$this->assertEquals(0, $square->volume());
 
 		$square = new Square(3.14);
-		$this->assertEquals(30.959144, $square->volume());
+		$this->assertEquals(0, $square->volume());
 	}
 
 }

@@ -9,44 +9,44 @@ class CircleTest extends \PHPUnit_Framework_TestCase
 
 	public function testCanCalculateArea()
 	{
-		$square = new Circle(0);
-		$this->assertEquals(0, $square->area());
+		$circle = new Circle(0);
+		$this->assertEquals(0, $circle->area());
 
-		$square = new Circle(2);
+		$circle = new Circle(2);
 		$value  = pi() * 2 * 2;
-		$this->assertEquals($value, $square->area());
+		$this->assertEquals($value, $circle->area());
 
-		$square = new Circle(3.14);
+		$circle = new Circle(3.14);
 		$value  = pi() * 3.14 * 3.14;
-		$this->assertEquals($value, $square->area());
+		$this->assertEquals($value, $circle->area());
 	}
 
 	public function testCanCalculatePerimeter()
 	{
-		$square = new Circle(0);
-		$this->assertEquals(0, $square->perimeter());
+		$circle = new Circle(0);
+		$this->assertEquals(0, $circle->perimeter());
 
-		$square = new Circle(2);
+		$circle = new Circle(2);
 		$value  = 2 * pi() * 2;
-		$this->assertEquals($value, $square->perimeter());
+		$this->assertEquals($value, $circle->perimeter());
 
-		$square = new Circle(3.14);
+		$circle = new Circle(3.14);
 		$value  = 2 * pi() * 3.14;
-		$this->assertEquals($value, $square->perimeter());
+		$this->assertEquals($value, $circle->perimeter());
 	}
 
 	public function testCanCalculateVolume()
 	{
-		$square = new Circle(0);
-		$this->assertEquals(0, $square->volume());
+		$circle = new Circle(0);
+		$this->assertEquals(0, $circle->volume());
 
-		$square = new Circle(2);
+		$circle = new Circle(2);
 		$value  = 4 / ( 3 * pi() * 2 * 2 *2 );
-		$this->assertEquals($value, $square->volume());
+		$this->assertEquals($value, $circle->volume());
 
-		$square = new Circle(3.14);
+		$circle = new Circle(3.14);
 		$value = 4 / ( 3 * pi() * 3.14 * 3.14 *3.14 );
-		$this->assertEquals($value, $square->volume());
+		$this->assertEquals($value, $circle->volume());
 	}
 
 }

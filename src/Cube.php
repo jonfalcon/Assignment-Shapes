@@ -4,18 +4,22 @@ namespace Shapes;
 
 include_once('ShapeInterface.php');
 
-class Square implements ShapeInterface {
+class Cube implements ShapeInterface {
 
+	/**
+	 * Length of one side
+	 * @var float
+	 */
 	protected $side;
 
 	/**
-	 * Square constructor.
+	 * Default constructor.
 	 *
 	 * @param float $side
 	 */
 	public function __construct($side)
 	{
-		$this->side = floatval($side);
+		$this->side = $side;
 	}
 
 	/**
@@ -25,19 +29,18 @@ class Square implements ShapeInterface {
 	 */
 	public function area()
 	{
-		$length = $this->side;
-
-		return $length * $length;
+		return 6 * ($this->side * $this->side);
 	}
 
 	/**
 	 * Get the perimeter
+	 * NOTE: For a circle/sphere this is also known as circumference
 	 *
 	 * @return float
 	 */
 	public function perimeter()
 	{
-		return 4 * $this->side;
+		return 0;
 	}
 
 	/**
@@ -47,7 +50,9 @@ class Square implements ShapeInterface {
 	 */
 	public function volume()
 	{
-		return 0;
+		$length = $this->side;
+
+		return $length * $length * $length;
 	}
 
 }

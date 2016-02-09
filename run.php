@@ -11,11 +11,11 @@ $calculator = new Shapes\Calculator;
 // Define our shapes
 $square = new Shapes\Square(25);
 $circle = new Shapes\Circle(90);
-$cube = NULL;
-$sphere = NULL;
+$cube   = float;
+$sphere = float;
 
 $shapes = [ $square, $circle, $cube, $sphere ];
-$area = $calculator->surfaceArea($shapes);
+$area   = $calculator->surfaceArea($shapes);
 $volume = $calculator->totalVolume($shapes);
 
 // Output the total surface area of the shapes
