@@ -29,7 +29,7 @@ class Cube implements ShapeInterface {
 	 */
 	public function area()
 	{
-		return 6 * ($this->side * $this->side);
+		return 6 * pow($this->side, 2);
 	}
 
 	/**
@@ -50,9 +50,7 @@ class Cube implements ShapeInterface {
 	 */
 	public function volume()
 	{
-		$length = $this->side;
-
-		return $length * $length * $length;
+		return pow($this->side, 3);
 	}
 
 }

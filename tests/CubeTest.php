@@ -1,6 +1,6 @@
 <?php
 
-require dirname(__DIR__) . '/src/Cube.php';
+require_once dirname(__DIR__) . '/src/Cube.php';
 
 use Shapes\Cube;
 
@@ -19,7 +19,7 @@ class CubeTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals(59.1576, $square->area());
 	}
 
-	public function testPermiterAlwaysReturnZero()
+	public function testPermiterAlwaysReturnsZero()
 	{
 		$square = new Cube(0);
 		$this->assertEquals(0, $square->perimeter());

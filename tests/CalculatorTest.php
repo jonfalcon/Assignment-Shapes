@@ -1,8 +1,8 @@
 <?php
 
-require dirname(__DIR__) . '/src/Square.php';
-require dirname(__DIR__) . '/src/Circle.php';
-require dirname(__DIR__) . '/src/Calculator.php';
+require_once dirname(__DIR__) . '/src/Square.php';
+require_once dirname(__DIR__) . '/src/Circle.php';
+require_once dirname(__DIR__) . '/src/Calculator.php';
 
 use Shapes\Square;
 use Shapes\Circle;

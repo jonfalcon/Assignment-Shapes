@@ -1,6 +1,6 @@
 <?php
 
-require dirname(__DIR__) . '/src/Square.php';
+require_once dirname(__DIR__) . '/src/Square.php';
 
 use Shapes\Square;
 
@@ -31,7 +31,7 @@ class SquareTest extends \PHPUnit_Framework_TestCase
 		$this->assertEquals(12.56, $square->perimeter());
 	}
 
-	public function testVolumeAlwaysReturnZero()
+	public function testVolumeAlwaysReturnsZero()
 	{
 		$square = new Square(0);
 		$this->assertEquals(0, $square->volume());
